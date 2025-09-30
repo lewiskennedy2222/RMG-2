@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Random Movie Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="theme-mandy">
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <h1>Random Movie Generator</h1>
+          <div class="tag">Mandy</div>
+        </div>
+        <div class="select">
+          <label for="robot">Robot:</label>
+          <select id="robot">
+            <option value="Mandy" selected>Mandy</option>
+            <option value="PP">PP</option>
+            <option value="Charkins">Charkins</option>
+            <option value="LPK">LPK</option>
+          </select>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="row">
+          <span class="pill">Spin</span>
+          <div class="controls">
+            <button id="btnGenre" class="btn primary">Spin</button>
+            <button id="btnDecade" class="btn" disabled>Spin</button>
+            <button id="btnFilm" class="btn" disabled>Spin</button>
+            <button id="resetBtn" class="btn">Reset</button>
+          </div>
+        </div>
+        <div class="reel" id="genreReel"><div id="genreCells"></div></div>
+        <div class="reel" id="decadeReel"><div id="decadeCells"></div></div>
+        <div class="reel" id="filmReel"><div id="filmCells"></div></div>
+        <div id="filmPoster"></div>
+        <div id="filmTitle" class="title"></div>
+        <div id="filmMeta" class="meta"></div>
+      </div>
+      <div class="panel">
+        <div class="row">
+          <span class="pill">Lineup</span>
+          <span id="lineupInfo" class="pill soft">Waiting for films</span>
+        </div>
+        <div id="lineup" class="lineup">
+          <div class="slot" data-slot="0">
+            <div class="head"><span class="label">Slot 1</span><span>Empty</span></div>
+            <div class="poster blank"></div>
+            <div class="title"></div>
+          </div>
+          <div class="slot" data-slot="1">
+            <div class="head"><span class="label">Slot 2</span><span>Empty</span></div>
+            <div class="poster blank"></div>
+            <div class="title"></div>
+          </div>
+          <div class="slot" data-slot="2">
+            <div class="head"><span class="label">Slot 3</span><span>Empty</span></div>
+            <div class="poster blank"></div>
+            <div class="title"></div>
+          </div>
+        </div>
+        <div id="shuffleCaption" class="caption" style="display:none;">
+          The films have been randomly re-ordered, please select A, B or C.
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
